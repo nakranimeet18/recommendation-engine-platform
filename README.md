@@ -22,3 +22,19 @@ Build an industrial-scale movie recommendation system using MovieLens 32M.
 6. Hybrid Recommendation
 7. API Development
 8. Deployment
+
+### Weighted Rating Feature
+
+Implemented IMDb-style Weighted Rating to improve ranking quality.
+
+Formula:
+
+WR = (v/(v+m) × R) + (m/(v+m) × C)
+
+Where:
+- R = Average movie rating
+- v = Number of ratings
+- C = Mean rating across all movies
+- m = 90th percentile of rating counts
+
+This reduces bias from movies with very few ratings and improves recommendation quality.
